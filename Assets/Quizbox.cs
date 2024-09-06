@@ -11,8 +11,10 @@ public class Quizbox : MonoBehaviour
     [SerializeField]
     private GameObject buttonGO;
     string[] questions;
+    ScrollRect rect;
     public void OnEnable()
     {
+        rect = GetComponent<ScrollRect>();
         if (CAQ)
         {
             questions = CAQ.GetQuiz();
@@ -23,8 +25,9 @@ public class Quizbox : MonoBehaviour
     {
         for (int i = 0; i < index; i++)
         {
-            Instantiate(buttonGO,transform);
-            buttonGO.GetComponentInChildren<TMP_Text>().text = questions[i];
+            GameObject go = Instantiate(buttonGO,rect.content.transform);
+            go.GetComponentInChildren<TMP_Text>().text = questions[i];
+
         }
     }
 }
