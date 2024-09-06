@@ -11,6 +11,7 @@ public class ClipsAndQuiz : MonoBehaviour
     private VideoClip clip;
     [SerializeField]
     private string[] quiz;
+    private double quizTime;
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +38,7 @@ public class ClipsAndQuiz : MonoBehaviour
         if(clip != null)
         {
             VideoManager.Instance.PlayVid(clip);
+            VideoManager.Instance.quizManagerTime = quizTime;
         }
     }
 }

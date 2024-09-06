@@ -23,6 +23,7 @@ public class  VideoManager: Singleton<VideoManager>
     public void StopVid()
     {
         player.Stop();
+        player.clip = null;
     }
     public double VidDuration => player.time;
     public void PauseVid()
@@ -32,6 +33,14 @@ public class  VideoManager: Singleton<VideoManager>
             player.Pause();
         }
     }
+    public double quizManagerTime;
     
+    void Update()
+    {
+        if(VidDuration > quizManagerTime && VidDuration > 0)
+        {
+            return;
+        }
+    }
 
 }
