@@ -12,7 +12,7 @@ public class Quizbox : MonoBehaviour
     private GameObject buttonGO;
     string[] questions;
     ScrollRect rect;
-    public void OnEnable()
+    public void Start()
     {
         rect = GetComponent<ScrollRect>();
         if (CAQ)
@@ -26,6 +26,8 @@ public class Quizbox : MonoBehaviour
         for (int i = 0; i < index; i++)
         {
             GameObject go = Instantiate(buttonGO,rect.content.transform);
+            RectTransform rectGO = go.GetComponent<RectTransform>();
+            rectGO.anchoredPosition = new Vector3(0,i*50-20,0);
             go.GetComponentInChildren<TMP_Text>().text = questions[i];
 
         }

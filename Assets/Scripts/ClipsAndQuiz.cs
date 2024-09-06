@@ -32,12 +32,11 @@ public class ClipsAndQuiz : MonoBehaviour
         }
         return quiz;
     }
-    public VideoClip GetVideoClip()
+    public void PlayVideoClip()
     {
         if(clip != null)
         {
-            return clip;
+            VideoManager.Instance.PlayVid(clip);
         }
-        return null;
     }
 }
