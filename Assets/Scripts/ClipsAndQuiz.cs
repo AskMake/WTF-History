@@ -5,25 +5,24 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class ClipsAndQuiz : MonoBehaviour
+[CreateAssetMenu]
+public class ClipsAndQuiz : ScriptableObject
 {
+    public string VideoAndQuizName;   
     [SerializeField]
     private VideoClip clip;
     [SerializeField]
     private string[] quiz;
-    private double quizTime;
+    [SerializeField]
+    private double[] quizTime;
     // Start is called before the first frame update
-    void Awake()
+    void OnEnable()
     {
-        if (quiz.Length == 0)
+        if (quiz?.Length == 0)
         {
             Debug.LogWarning("Please add quiz questions");
         }
-        else if (quiz.Length > 4)
-        {
-            Array.Resize(ref quiz, 4);
-        }
-        quiz = quiz.Where(val => val != "" ).ToArray();
+        quiz = quiz?.Where(val => val != "" ).ToArray();
     }
     public string[] GetQuiz()
     {
@@ -33,12 +32,15 @@ public class ClipsAndQuiz : MonoBehaviour
         }
         return quiz;
     }
-    public void PlayVideoClip()
+    public double[] GetQuizTime()
+    {
+        return quizTime;
+    }
+    public void SetVideoClip()
     {
         if(clip != null)
         {
-            VideoManager.Instance.PlayVid(clip);
-            VideoManager.Instance.quizManagerTime = quizTime;
+            VideoManager.Instance.SetClip(clip);
         }
     }
 }

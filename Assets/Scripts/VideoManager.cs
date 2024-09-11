@@ -15,10 +15,14 @@ public class  VideoManager: Singleton<VideoManager>
             player = GetComponent<VideoPlayer>();
         }
     }
-    public void PlayVid(VideoClip clip)
+    public void SetClip(VideoClip clip)
     {
-        player.clip = clip;
-        player.Play();
+        player.clip = clip;;
+    }
+    public void PlayVid()
+    {
+        if(player.clip != null){
+        player.Play();}
     }
     public void StopVid()
     {
@@ -33,13 +37,17 @@ public class  VideoManager: Singleton<VideoManager>
             player.Pause();
         }
     }
-    public double quizManagerTime;
+    public double[] quizManagerTime;
     
     void Update()
     {
-        if(VidDuration > quizManagerTime && VidDuration > 0)
+        for(int i = 0; i < quizManagerTime.Length; i++)
         {
-            return;
+            if(VidDuration >= quizManagerTime[i] && VidDuration > 0 && quizManagerTime[i] != -1)
+            {
+                PauseVid();
+                quizManagerTime[i] = -1;
+            }
         }
     }
 
