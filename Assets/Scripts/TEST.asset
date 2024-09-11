@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: TEST
   m_EditorClassIdentifier: 
   VideoAndQuizName: 
-  clip: {fileID: 0}
-  quiz: []
+  clip: {fileID: 32900000, guid: 4885f0235826ae44b85883e417d6bb93, type: 3}
+  quiz:
+  - When
+  - What
+  - Where
+  - Who
   quizTime:
-  - 0
-  - 0
-  - 0
+  - 5
+  - 10
+  - 15

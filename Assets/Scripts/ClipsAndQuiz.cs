@@ -13,11 +13,10 @@ public class ClipsAndQuiz : ScriptableObject
     private VideoClip clip;
     [SerializeField]
     private string[] quiz;
-    [SerializeField]
-    private double[] quizTime;
+    public double[] quizTime;
     // Start is called before the first frame update
     void OnEnable()
-    {
+    {   
         if (quiz?.Length == 0)
         {
             Debug.LogWarning("Please add quiz questions");

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ public class Quizbox : MonoBehaviour
             questions = CAQ.GetQuiz();
             if(questions != null){
             SetButtons(questions.Length);}
-            VideoManager.Instance.quizManagerTime = CAQ.GetQuizTime();
+            VideoManager.Instance.quizManagerTime = CAQ.GetQuizTime().ToArray();
             CAQ.SetVideoClip();
         }
     }
