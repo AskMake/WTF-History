@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -9,11 +10,8 @@ using Utilities;
 public class  VideoManager: Singleton<VideoManager>
 {
     private VideoPlayer player;
-    [SerializeField]
-    private GameObject quizbox;
     private void OnEnable()
     {
-        quizbox.SetActive(false);
         if(player == null)
         {
             player = GetComponent<VideoPlayer>();
@@ -23,10 +21,16 @@ public class  VideoManager: Singleton<VideoManager>
     {
         player.clip = clip;;
     }
-    public void PlayVid()
+    public void ContinuePlay()
     {
-        if(player.clip != null){
-        player.Play();}
+        player.Play();
+    }
+    public void PlayVid(VideoClip clip)
+    {
+        if(clip != null){
+        player.clip = clip;
+        player.Play();
+        }
     }
     public void StopVid()
     {
@@ -39,21 +43,6 @@ public class  VideoManager: Singleton<VideoManager>
         if(player.clip != null)
         {
             player.Pause();
-        }
-    }
-    public double[] quizManagerTime;
-    
-    void Update()
-    {
-        for(int i = 0; i < quizManagerTime.Length; i++)
-        {
-            if(VidDuration >= quizManagerTime[i] && VidDuration > 0 && quizManagerTime[i] != -1)
-            {
-                PauseVid();
-                quizbox.SetActive(true);
-                quizManagerTime[i] = -1;
-                
-            }
         }
     }
 

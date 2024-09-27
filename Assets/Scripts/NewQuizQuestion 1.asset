@@ -9,6 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf294410a16c13840b9eb8a825d5e16b, type: 3}
-  m_Name: NewQuizQuestion
+  m_Script: {fileID: 0}
+  m_Name: NewQuizQuestion 1
   m_EditorClassIdentifier: Assembly-CSharp::QuizQuestion
+  questionText: HI
+  answers:
+  - answerText: w
+    isCorrect: 0
+  - answerText: w
+    isCorrect: 0
+  - answerText: w
+    isCorrect: 0
+  - answerText: w
+    isCorrect: 1

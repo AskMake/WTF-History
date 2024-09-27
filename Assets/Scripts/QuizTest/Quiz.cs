@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Quiz : MonoBehaviour
@@ -10,16 +11,20 @@ public class Quiz : MonoBehaviour
     public TMP_Text resultText;
     public float[] waitTime;
     public GameObject quizObject;
+    [SerializeField]
+    private float pauseTime = 5;
 
     private int currentQuestionIndex;
 
     private void Start()
     {
         DisplayQuestion();
+        quizObject.SetActive(false);
     }
 
     public void DisplayQuestion()
     {
+        VideoManager.Instance.PauseVid();
         //displays the question from the current SO to the questionText 
         questionText.text = currentQuestion[currentQuestionIndex].questionText;
 
@@ -35,6 +40,8 @@ public class Quiz : MonoBehaviour
 
     public void CheckAnswer(int answerIndex)
     {
+        resultText.gameObject.SetActive(true);
+        resultText.text = "";
         if (currentQuestion[currentQuestionIndex].answers[answerIndex].isCorrect)
         {
             //if player chose correct answer
@@ -46,23 +53,34 @@ public class Quiz : MonoBehaviour
             resultText.text = "Wrong!";
         }
 
+        StartCoroutine(LookAtAnswerTime(pauseTime));
         //increases index so that next time next question SO is shown
         currentQuestionIndex += 1;
-
         //checks if there are more questions SO in the list
         if (currentQuestionIndex < currentQuestion.Length)
         {
             quizObject.SetActive(false);
-            StartCoroutine(WaitTime());
+            StartCoroutine(WaitTime(waitTime[currentQuestionIndex - 1]+pauseTime));
         }
+        
     }
 
     //waits the waittime of current questions index, for X amount of seconds
-    private IEnumerator WaitTime()
+    private IEnumerator WaitTime(float time)
     {
-        yield return new WaitForSeconds(waitTime[currentQuestionIndex - 1]);
+        yield return new WaitForSeconds(time);
 
         quizObject.SetActive(true);
         DisplayQuestion();
+    }
+    public void TimeToWait(float time)
+    {
+        StartCoroutine(WaitTime(time));
+    }
+    private IEnumerator LookAtAnswerTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        resultText.gameObject.SetActive(false);
+        VideoManager.Instance.ContinuePlay();
     }
 }
