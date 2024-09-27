@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: NewQuizQuestion
+  m_EditorClassIdentifier: Assembly-CSharp::QuizQuestion
+  questionText: Who was Donner
+  answers:
+  - answerText: A weirdo
+    isCorrect: 0
+  - answerText: Funny dood
+    isCorrect: 0
+  - answerText: Big strong
+    isCorrect: 1
+  - answerText: Didi
+    isCorrect: 1
