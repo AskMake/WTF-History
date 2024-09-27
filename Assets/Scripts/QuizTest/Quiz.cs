@@ -85,4 +85,8 @@ public class Quiz : MonoBehaviour
         resultText.gameObject.SetActive(false);
         VideoManager.Instance.ContinuePlay();
     }
+    public void SetQuestionIndex(int questionIndex)
+    {
+        currentQuestionIndex = questionIndex;
+    }
 }
