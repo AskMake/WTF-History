@@ -212,7 +212,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1439440330}
   m_PlaneDistance: 10
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -1114,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &361165278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1800,8 +1800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestion:
+  - {fileID: 11400000, guid: 9da0ff1f4bbb17e4eae0ab68d4bf0f05, type: 2}
   - {fileID: 11400000, guid: 06a67fcb9cbdc7646940a6af21de1af3, type: 2}
-  - {fileID: 11400000, guid: 28fd4c7747a583640b5c3b321d4f390f, type: 2}
   questionText: {fileID: 246229821}
   buttonText:
   - {fileID: 1473605638}
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   - 5
   quizObject: {fileID: 361165277}
   rectQuiz: {fileID: 1326669404}
-  pauseTime: 4
+  pauseTime: 3
 --- !u!4 &1267518208
 Transform:
   m_ObjectHideFlags: 0
@@ -2954,6 +2954,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1267518207}
+        m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
+        m_MethodName: SetQuestionIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

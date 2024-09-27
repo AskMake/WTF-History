@@ -8,9 +8,9 @@ public class Answer
     public bool isCorrect;
 }
 
-[CreateAssetMenu(fileName = "NewQuizQuestion", menuName = "Quiz/Question")]
-public class QuizQuestion : ScriptableObject
-{
-    public string questionText;
-    public List<Answer> answers;
-}
+// [CreateAssetMenu(fileName = "NewQuizQuestion", menuName = "Quiz/Question")]
+// public class QuizQuestion : ScriptableObject
+// {
+//     public string questionText;
+//     public List<Answer> answers;
+// }
