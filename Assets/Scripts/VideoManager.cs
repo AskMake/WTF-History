@@ -10,6 +10,8 @@ using Utilities;
 public class  VideoManager: Singleton<VideoManager>
 {
     private VideoPlayer player;
+    public Material material;
+    public Texture2D texture;
     private void OnEnable()
     {
         if(player == null)
@@ -45,5 +47,13 @@ public class  VideoManager: Singleton<VideoManager>
             player.Pause();
         }
     }
+    private void Update()
+    {
 
+        if(!player.isPlaying && player.clip != null && (ulong)player.frame == player.frameCount)
+        {
+            player.Stop();
+            material.mainTexture = texture;
+        }
+    }
 }
