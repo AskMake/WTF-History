@@ -1801,6 +1801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestion:
   - {fileID: 11400000, guid: 06a67fcb9cbdc7646940a6af21de1af3, type: 2}
+  - {fileID: 11400000, guid: 28fd4c7747a583640b5c3b321d4f390f, type: 2}
   questionText: {fileID: 246229821}
   buttonText:
   - {fileID: 1473605638}
@@ -1809,9 +1810,11 @@ MonoBehaviour:
   - {fileID: 1416651378}
   resultText: {fileID: 1420998415}
   waitTime:
-  - 2
+  - 5
   - 5
   quizObject: {fileID: 361165277}
+  rectQuiz: {fileID: 1326669404}
+  pauseTime: 4
 --- !u!4 &1267518208
 Transform:
   m_ObjectHideFlags: 0

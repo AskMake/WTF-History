@@ -11,6 +11,7 @@ public class Quiz : MonoBehaviour
     public TMP_Text resultText;
     public float[] waitTime;
     public GameObject quizObject;
+    public GameObject rectQuiz;
     [SerializeField]
     private float pauseTime = 5;
 
@@ -24,7 +25,9 @@ public class Quiz : MonoBehaviour
 
     public void DisplayQuestion()
     {
+        rectQuiz.SetActive(true);
         VideoManager.Instance.PauseVid();
+        quizObject.SetActive(true);
         //displays the question from the current SO to the questionText 
         questionText.text = currentQuestion[currentQuestionIndex].questionText;
 
@@ -39,7 +42,7 @@ public class Quiz : MonoBehaviour
     }
 
     public void CheckAnswer(int answerIndex)
-    {
+    {   
         resultText.gameObject.SetActive(true);
         resultText.text = "";
         if (currentQuestion[currentQuestionIndex].answers[answerIndex].isCorrect)
@@ -53,13 +56,14 @@ public class Quiz : MonoBehaviour
             resultText.text = "Wrong!";
         }
 
-        StartCoroutine(LookAtAnswerTime(pauseTime));
+        
         //increases index so that next time next question SO is shown
         currentQuestionIndex += 1;
+        StartCoroutine(LookAtAnswerTime(pauseTime));
         //checks if there are more questions SO in the list
         if (currentQuestionIndex < currentQuestion.Length)
-        {
-            quizObject.SetActive(false);
+        {   
+            rectQuiz.SetActive(false);
             StartCoroutine(WaitTime(waitTime[currentQuestionIndex - 1]+pauseTime));
         }
         
@@ -69,8 +73,6 @@ public class Quiz : MonoBehaviour
     private IEnumerator WaitTime(float time)
     {
         yield return new WaitForSeconds(time);
-
-        quizObject.SetActive(true);
         DisplayQuestion();
     }
     public void TimeToWait(float time)
@@ -78,7 +80,7 @@ public class Quiz : MonoBehaviour
         StartCoroutine(WaitTime(time));
     }
     private IEnumerator LookAtAnswerTime(float time)
-    {
+    { 
         yield return new WaitForSeconds(time);
         resultText.gameObject.SetActive(false);
         VideoManager.Instance.ContinuePlay();
