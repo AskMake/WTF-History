@@ -19,7 +19,7 @@ public class Quizbox : MonoBehaviour
             questions = CAQ.GetQuiz();
             if(questions != null){
             SetButtons(questions.Length);}
-            VideoManager.Instance.quizManagerTime = CAQ.GetQuizTime().ToArray();
+            // VideoManager.Instance.quizManagerTime = CAQ.GetQuizTime().ToArray();
             CAQ.SetVideoClip();
         }
     }
