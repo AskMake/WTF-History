@@ -10,8 +10,8 @@ using Utilities;
 public class  VideoManager: Singleton<VideoManager>
 {
     private VideoPlayer player;
-    public Material material;
-    public Texture2D texture;
+    public GameObject topicsGO;
+
     private void OnEnable()
     {
         if(player == null)
@@ -50,10 +50,10 @@ public class  VideoManager: Singleton<VideoManager>
     private void Update()
     {
 
-        if(!player.isPlaying && player.clip != null && (ulong)player.frame == player.frameCount)
+        if(!player.isPlaying && player.clip != null && (ulong)player.frame == player.frameCount-1)
         {
             player.Stop();
-            material.mainTexture = texture;
+            topicsGO.SetActive(true);
         }
     }
 }

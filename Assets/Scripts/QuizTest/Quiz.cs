@@ -9,7 +9,7 @@ public class Quiz : MonoBehaviour
     public TMP_Text questionText;
     public TMP_Text[] buttonText;
     public TMP_Text resultText;
-    public float[] waitTime;
+    //public float[] waitTime;
     public GameObject quizObject;
     public GameObject rectQuiz;
     [SerializeField]
@@ -64,7 +64,7 @@ public class Quiz : MonoBehaviour
         if (currentQuestionIndex < currentQuestion.Length)
         {   
             rectQuiz.SetActive(false);
-            StartCoroutine(WaitTime(waitTime[currentQuestionIndex - 1]+pauseTime));
+            StartCoroutine(WaitTime(currentQuestion[currentQuestionIndex].waitTime+pauseTime));
         }
         
     }
