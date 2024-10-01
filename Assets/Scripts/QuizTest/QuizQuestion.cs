@@ -6,4 +6,5 @@ public class QuizQuestion : ScriptableObject
 {
     public string questionText;
     public List<Answer> answers;
+    public float waitTime;
 }
