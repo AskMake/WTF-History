@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Quiz : MonoBehaviour
     public TMP_Text questionText;
     public TMP_Text[] buttonText;
     public TMP_Text resultText;
+    private bool isPaused;
     //public float[] waitTime;
     public GameObject quizObject;
     public GameObject rectQuiz;
@@ -88,5 +90,18 @@ public class Quiz : MonoBehaviour
     public void SetQuestionIndex(int questionIndex)
     {
         currentQuestionIndex = questionIndex;
+    }
+    public void Pause()
+    {
+        if(isPaused)
+        {
+            isPaused = false;
+            Time.timeScale = 1.0f;
+        }
+        else
+        {
+            isPaused = true;
+            Time.timeScale= 0;
+        }
     }
 }
