@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d24483d193bc5d4bb36fdfd1f3583aa, type: 3}
-  m_Name: NewQuizQuestion 1
+  m_Name: MeiwersQuiz1 2
   m_EditorClassIdentifier: 
-  questionText: Owgj
+  questionText: What unusual request did Brandes allegedly have for Armin?
   answers:
-  - answerText: Gnje
+  - answerText: He wanted Armin to start by eating his left toe
     isCorrect: 0
-  - answerText: kgntk
-    isCorrect: 0
-  - answerText: rkms
-    isCorrect: 0
-  - answerText: msrvks
+  - answerText: He wanted Armin to bite off his penis
     isCorrect: 1
+  - answerText: He wanted Armin to keep his balls and pickle them in a jar
+    isCorrect: 0
+  waitTime: 169
