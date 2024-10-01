@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d24483d193bc5d4bb36fdfd1f3583aa, type: 3}
+  m_Name: DonnerPartyQuiz1
+  m_EditorClassIdentifier: 
+  questionText: 'What did Clyman say to Reed about this shortcut? '
+  answers:
+  - answerText: 'This shortcut is highly efficient, and I advice you to take it '
+    isCorrect: 0
+  - answerText: 'The Hastings Cutoff will lead you south instead of north, and it
+      will therefore be a warmer way to travel. '
+    isCorrect: 0
+  - answerText: 'Lansford Hastings knows not what he speaks of, as he has never travelled
+      his suggested path himself. '
+    isCorrect: 1
+  waitTime: 154

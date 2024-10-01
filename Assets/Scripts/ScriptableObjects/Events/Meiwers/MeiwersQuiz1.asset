@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d24483d193bc5d4bb36fdfd1f3583aa, type: 3}
+  m_Name: MeiwersQuiz1
+  m_EditorClassIdentifier: 
+  questionText: What do you think Armin wrote in these ads?
+  answers:
+  - answerText: ' "I want eat your tasty body, please and thank"'
+    isCorrect: 0
+  - answerText: '"Gobble gobble, yummy yum yum on your tumtum"'
+    isCorrect: 0
+  - answerText: '"Have you a normal body, i butchering you and eat your horny flesh"'
+    isCorrect: 1
+  waitTime: 260

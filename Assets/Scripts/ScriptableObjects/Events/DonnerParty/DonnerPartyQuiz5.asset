@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d24483d193bc5d4bb36fdfd1f3583aa, type: 3}
-  m_Name: NewQuizQuestion
+  m_Name: DonnerPartyQuiz5
   m_EditorClassIdentifier: 
-  questionText: Wow
+  questionText: 'WHAT did Graves tell his daughters? '
   answers:
-  - answerText: wop
+  - answerText: 'I''m not your real father. '
     isCorrect: 0
-  - answerText: womp
+  - answerText: 'Believe in God, because your faith will save you '
     isCorrect: 0
-  - answerText: Wnpom
-    isCorrect: 0
-  - answerText: womp
+  - answerText: Eat my body for food.
     isCorrect: 1
-  waitTime: 5
+  waitTime: 330
