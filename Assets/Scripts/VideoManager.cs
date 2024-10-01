@@ -56,4 +56,15 @@ public class  VideoManager: Singleton<VideoManager>
             topicsGO.SetActive(true);
         }
     }
+    public void PauseUnpause()
+    {
+        if (player.clip != null && !player.isPaused)
+        {
+            player.Pause();
+        }
+        else if (player.clip != null && player.isPaused)
+        {
+            player.Play();
+        }
+    }
 }

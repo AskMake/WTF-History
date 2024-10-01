@@ -22,3 +22,4 @@ MonoBehaviour:
     isCorrect: 0
   - answerText: womp
     isCorrect: 1
+  waitTime: 5

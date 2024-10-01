@@ -22,3 +22,4 @@ MonoBehaviour:
     isCorrect: 0
   - answerText: msrvks
     isCorrect: 1
+  waitTime: 5
