@@ -914,7 +914,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1240,7 +1240,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1755,11 +1755,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.13
+  m_fontSize: 14.6
   m_fontSizeBase: 18.13
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 9.07
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -2919,6 +2919,16 @@ MonoBehaviour:
   currentQuestion:
   - {fileID: 11400000, guid: 9da0ff1f4bbb17e4eae0ab68d4bf0f05, type: 2}
   - {fileID: 11400000, guid: 06a67fcb9cbdc7646940a6af21de1af3, type: 2}
+  - {fileID: 11400000, guid: 5e628eff0f2baa449aa3db0bc0b8d624, type: 2}
+  - {fileID: 11400000, guid: 10cdeccf3d28e4f4dac2928c7f7b4f9b, type: 2}
+  - {fileID: 11400000, guid: a6f6d7c7270868e4b9542e40ca5a65d2, type: 2}
+  - {fileID: 11400000, guid: 90ad4b2faf6ced042ad2caa4ec3a884b, type: 2}
+  - {fileID: 11400000, guid: e26a9896b907cde45b34bcda7ae77ef1, type: 2}
+  - {fileID: 11400000, guid: 4927fb07358d50d4597d170b8224ee80, type: 2}
+  - {fileID: 11400000, guid: 33ab4cadbe0e0a84d91f8e5dc1d2d8cc, type: 2}
+  - {fileID: 11400000, guid: b00b575f5cf78e2439fa30a0e4023fe0, type: 2}
+  - {fileID: 11400000, guid: f1a15adffa8c15d49a7f2f44ba429470, type: 2}
+  - {fileID: 11400000, guid: 12ebd6def93ec864ab86329260edd3da, type: 2}
   questionText: {fileID: 440753791}
   buttonText:
   - {fileID: 1473605638}
