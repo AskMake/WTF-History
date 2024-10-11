@@ -23,4 +23,4 @@ MonoBehaviour:
   - answerText: A wheel broke off from one of the wagons, running over George Donner
       and crushing his leg.
     isCorrect: 0
-  waitTime: 154
+  waitTime: 5
