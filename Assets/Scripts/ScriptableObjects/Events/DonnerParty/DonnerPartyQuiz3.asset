@@ -21,4 +21,4 @@ MonoBehaviour:
     isCorrect: 0
   - answerText: None! it actually ADDED 200 km!
     isCorrect: 1
-  waitTime: 150
+  waitTime: 179

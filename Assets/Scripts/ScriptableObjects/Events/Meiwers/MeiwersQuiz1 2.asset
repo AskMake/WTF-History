@@ -20,4 +20,4 @@ MonoBehaviour:
     isCorrect: 1
   - answerText: He wanted Armin to keep his balls and pickle them in a jar
     isCorrect: 0
-  waitTime: 169
+  waitTime: 364

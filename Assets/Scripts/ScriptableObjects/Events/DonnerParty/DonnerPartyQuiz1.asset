@@ -22,4 +22,4 @@ MonoBehaviour:
   - answerText: 'Lansford Hastings knows not what he speaks of, as he has never travelled
       his suggested path himself. '
     isCorrect: 1
-  waitTime: 154
+  waitTime: 0
