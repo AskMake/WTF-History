@@ -21,4 +21,4 @@ MonoBehaviour:
     isCorrect: 1
   - answerText: By going on dates and meeting up as often as they could.
     isCorrect: 0
-  waitTime: 364
+  waitTime: 260

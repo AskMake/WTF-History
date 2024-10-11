@@ -20,4 +20,4 @@ MonoBehaviour:
     isCorrect: 0
   - answerText: Eat my body for food.
     isCorrect: 1
-  waitTime: 330
+  waitTime: 479
