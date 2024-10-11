@@ -73,9 +73,11 @@ public class  VideoManager: Singleton<VideoManager>
         if (Player.clip != null && !Player.isPaused)
         {
             Player.Pause();
+            videoScroll.interactable = true;
         }
         else if (Player.clip != null && Player.isPaused)
         {
+            videoScroll.interactable = false;
             Player.Play();
         }
     }
