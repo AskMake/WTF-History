@@ -9,62 +9,62 @@ using Utilities;
 [RequireComponent(typeof(VideoPlayer))]
 public class  VideoManager: Singleton<VideoManager>
 {
-    private VideoPlayer player;
+    public VideoPlayer Player { get; private set;}
     public GameObject topicsGO;
 
     private void OnEnable()
     {
-        if(player == null)
+        if(Player == null)
         {
-            player = GetComponent<VideoPlayer>();
+            Player = GetComponent<VideoPlayer>();
         }
     }
     public void SetClip(VideoClip clip)
     {
-        player.clip = clip;;
+        Player.clip = clip;;
     }
     public void ContinuePlay()
     {
-        player.Play();
+        Player.Play();
     }
     public void PlayVid(VideoClip clip)
     {
         if(clip != null){
-        player.clip = clip;
-        player.Play();
+        Player.clip = clip;
+        Player.Play();
         }
     }
     public void StopVid()
     {
-        player.Stop();
-        player.clip = null;
+        Player.Stop();
+        Player.clip = null;
     }
-    public double VidDuration => player.time;
+    public double VidDuration => Player.time;
     public void PauseVid()
     {
-        if(player.clip != null)
+        if(Player.clip != null)
         {
-            player.Pause();
+            Player.Pause();
         }
     }
     private void Update()
     {
 
-        if(!player.isPlaying && player.clip != null && (ulong)player.frame == player.frameCount-1)
+        if(!Player.isPlaying && Player.clip != null && (ulong)Player.frame == Player.frameCount-1)
         {
-            player.Stop();
+            Player.Stop();
             topicsGO.SetActive(true);
         }
     }
     public void PauseUnpause()
     {
-        if (player.clip != null && !player.isPaused)
+        if (Player.clip != null && !Player.isPaused)
         {
-            player.Pause();
+            Player.Pause();
         }
-        else if (player.clip != null && player.isPaused)
+        else if (Player.clip != null && Player.isPaused)
         {
-            player.Play();
+            Player.Play();
         }
     }
 }

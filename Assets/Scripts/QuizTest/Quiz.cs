@@ -16,6 +16,7 @@ public class Quiz : MonoBehaviour
     public GameObject rectQuiz;
     [SerializeField]
     private float pauseTime = 5;
+    private bool displayQ;
 
     private int currentQuestionIndex;
 
@@ -66,7 +67,8 @@ public class Quiz : MonoBehaviour
         if (currentQuestionIndex < currentQuestion.Length)
         {   
             rectQuiz.SetActive(false);
-            StartCoroutine(WaitTime(currentQuestion[currentQuestionIndex].waitTime+pauseTime));
+            // float timeWait = currentQuestion[currentQuestionIndex+1].waitTime + pauseTime;
+            // StartCoroutine(WaitTime(timeWait));
         }
         
     }
@@ -77,15 +79,17 @@ public class Quiz : MonoBehaviour
         yield return new WaitForSeconds(time);
         DisplayQuestion();
     }
-    public void TimeToWait(float time)
-    {
-        StartCoroutine(WaitTime(time));
-    }
+    // public void TimeToWait()
+    // {
+    //     float timeWait = currentQuestion[currentQuestionIndex].waitTime;
+    //     StartCoroutine(WaitTime(timeWait));
+    // }
     private IEnumerator LookAtAnswerTime(float time)
     { 
         yield return new WaitForSeconds(time);
         resultText.gameObject.SetActive(false);
         VideoManager.Instance.ContinuePlay();
+        displayQ = false;
     }
     public void SetQuestionIndex(int questionIndex)
     {
@@ -102,6 +106,14 @@ public class Quiz : MonoBehaviour
         {
             isPaused = true;
             Time.timeScale= 0;
+        }
+    }
+    void Update()
+    {
+        if(currentQuestion[currentQuestionIndex].waitTime == VideoManager.Instance.Player.time && !displayQ && VideoManager.Instance.Player.isPlaying)
+        {
+            displayQ = true;
+            DisplayQuestion();
         }
     }
 }
