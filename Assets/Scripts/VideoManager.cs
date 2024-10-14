@@ -85,4 +85,11 @@ public class  VideoManager: Singleton<VideoManager>
     {
         Player.time = (double)videoScroll.value;
     }
+    public void MainMenu()
+    {
+        Player.Stop();
+        Player.clip = null;
+        topicsGO.SetActive(true);
+        videoScroll.value = 0;
+    }
 }
