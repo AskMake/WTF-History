@@ -10,6 +10,8 @@ public class  VideoManager: Singleton<VideoManager>
     public GameObject topicsGO;
     [SerializeField]
     private Slider videoScroll;
+    [SerializeField]
+    private GameObject pauseScreen;
 
     private void OnEnable()
     {
@@ -46,6 +48,7 @@ public class  VideoManager: Singleton<VideoManager>
         if(Player.clip != null)
         {
             Player.Pause();
+            pauseScreen.SetActive(true);
         }
     }
     private void Update()
