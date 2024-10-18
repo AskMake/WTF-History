@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Video;
+using Utilities;
 
-public class Quiz : MonoBehaviour
+public class Quiz : Singleton<Quiz>
 {
     public QuizQuestion[] currentQuestion;
     public TMP_Text questionText;
@@ -17,7 +15,7 @@ public class Quiz : MonoBehaviour
     public GameObject rectQuiz;
     [SerializeField]
     private float pauseTime = 5;
-    private bool displayQ;
+    public bool displayQ {get; private set;}
 
     private int currentQuestionIndex;
 
