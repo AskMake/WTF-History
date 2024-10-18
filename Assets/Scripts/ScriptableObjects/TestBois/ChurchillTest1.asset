@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d24483d193bc5d4bb36fdfd1f3583aa, type: 3}
-  m_Name: DonnerPartyQuiz2
+  m_Name: ChurchillTest1
   m_EditorClassIdentifier: 
-  questionText: What do you think was the first major obstacle the Donner party ran
-    into on this road?
+  questionText: What did Churchill and men of the time think about granting women
+    the right to vote?
   answers:
-  - answerText: 'The land was so wild and untravelled, they had to BUILD themselves
-      a road. '
+  - answerText: That it would disrupt the societal and familial structures of the
+      time
     isCorrect: 1
-  - answerText: 'They lost half their rations from a mountain lion attack '
+  - answerText: That it would be a good move for societal structure and the national
+      economy
     isCorrect: 0
-  - answerText: A wheel broke off from one of the wagons, running over George Donner
-      and crushing his leg.
+  - answerText: That it would be fine, because God made Eve for Adam, as he made
+      woman for man
     isCorrect: 0
-  waitTime: 10
+  waitTime: 107

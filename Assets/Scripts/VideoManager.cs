@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -75,7 +72,7 @@ public class  VideoManager: Singleton<VideoManager>
             Player.Pause();
             videoScroll.interactable = true;
         }
-        else if (Player.clip != null && Player.isPaused)
+        else if (Player.clip != null && Player.isPaused && !Quiz.Instance.displayQ)
         {
             videoScroll.interactable = false;
             Player.Play();
