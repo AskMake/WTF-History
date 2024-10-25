@@ -50,12 +50,12 @@ public class Quiz : Singleton<Quiz>
         if (currentQuestion[currentQuestionIndex].answers[answerIndex].isCorrect)
         {
             //if player chose correct answer
-            resultText.text = "Correct!";
+            resultText.text = "You answered correctly! Congrats!";
         }
         else
         {
             ///if player chose wrong answer
-            resultText.text = "Wrong!";
+            resultText.text = "Wrong, what a bummer, better luck next time!";
         }
 
         

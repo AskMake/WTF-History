@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/QuizTest.unity
+  - enabled: 0
+    path: Assets/Scenes/MainBuild.unity
     guid: 049ab9212d7c25144aabc50415f78ec5
   - enabled: 0
-    path: Assets/Scenes/QuizTestForwardingQuiz.unity
+    path: Assets/Scenes/QuizTest1.0.unity
     guid: 7f86981a437ddc84a8a38d44839a75ee
+  - enabled: 1
+    path: Assets/Scenes/QuizTest2.0.unity
+    guid: de1758f8a2f9ea34cab45e4b232d0491
   m_configObjects: {}
