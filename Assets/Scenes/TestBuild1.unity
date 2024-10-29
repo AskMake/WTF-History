@@ -227,6 +227,65 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &44771984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44771986}
+  - component: {fileID: 44771985}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &44771985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44771984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f9df04a5524ad4096b6915d00548de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestion:
+  - {fileID: 11400000, guid: 0f658751e576d4c4bb20bc206b2c1b91, type: 2}
+  - {fileID: 11400000, guid: 3cba02ce145644a41a46830985f81228, type: 2}
+  - {fileID: 11400000, guid: 5174e5e1cfd8de14885c38338d17ffd7, type: 2}
+  - {fileID: 11400000, guid: dce6908ec0222d640ae952b9e37cdfaf, type: 2}
+  questionText: {fileID: 0}
+  buttonText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  resultText: {fileID: 0}
+  quizObject: {fileID: 0}
+  rectQuiz: {fileID: 0}
+  pauseTime: 3
+--- !u!4 &44771986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44771984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61005373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1123,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: TimeToWait
         m_Mode: 1
@@ -1076,7 +1135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: SetQuestionIndex
         m_Mode: 3
@@ -1162,39 +1221,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248035486}
   m_CullTransparentMesh: 1
---- !u!1 &273654396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 273654397}
-  m_Layer: 0
-  m_Name: People
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &273654397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273654396}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 174.52245, y: 163.99916, z: -3.1984985}
-  m_LocalScale: {x: 0.3819453, y: 0.3819453, z: 0.3819453}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2139875973}
-  - {fileID: 326843839}
-  m_Father: {fileID: 1991250086}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281698028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,18 +1328,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 273654396}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &281698031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,16 +1393,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326843838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8.268282}
-  m_LocalScale: {x: 0.042168893, y: 0.042168893, z: 0.042168893}
+  m_LocalPosition: {x: 0, y: 0, z: 0.02903166}
+  m_LocalScale: {x: 0.028226284, y: 0.028226284, z: 0.028226284}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136352558}
-  m_Father: {fileID: 273654397}
+  m_Father: {fileID: 436332096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -464.40216, y: -424.85}
+  m_AnchoredPosition: {x: -1.3, y: -0.9099997}
   m_SizeDelta: {x: 50, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326843840
@@ -1459,7 +1473,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: TimeToWait
         m_Mode: 1
@@ -1471,7 +1485,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: SetQuestionIndex
         m_Mode: 3
@@ -1931,6 +1945,7 @@ Transform:
   - {fileID: 890439782}
   - {fileID: 1803618949}
   - {fileID: 248035487}
+  - {fileID: 326843839}
   m_Father: {fileID: 1991250086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440753789
@@ -2286,7 +2301,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: SetQuestionIndex
         m_Mode: 3
@@ -2967,18 +2982,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 273654396}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &794335282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,7 +3410,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -3710,7 +3713,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: SetQuestionIndex
         m_Mode: 3
@@ -3830,73 +3833,6 @@ Transform:
   - {fileID: 1147604944}
   - {fileID: 509683620}
   m_Father: {fileID: 1991250086}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1267518206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1267518208}
-  - component: {fileID: 1267518207}
-  m_Layer: 0
-  m_Name: Quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1267518207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267518206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f9df04a5524ad4096b6915d00548de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentQuestion:
-  - {fileID: 11400000, guid: 9da0ff1f4bbb17e4eae0ab68d4bf0f05, type: 2}
-  - {fileID: 11400000, guid: 06a67fcb9cbdc7646940a6af21de1af3, type: 2}
-  - {fileID: 11400000, guid: 5e628eff0f2baa449aa3db0bc0b8d624, type: 2}
-  - {fileID: 11400000, guid: 10cdeccf3d28e4f4dac2928c7f7b4f9b, type: 2}
-  - {fileID: 11400000, guid: a6f6d7c7270868e4b9542e40ca5a65d2, type: 2}
-  - {fileID: 11400000, guid: 90ad4b2faf6ced042ad2caa4ec3a884b, type: 2}
-  - {fileID: 11400000, guid: e26a9896b907cde45b34bcda7ae77ef1, type: 2}
-  - {fileID: 11400000, guid: 4927fb07358d50d4597d170b8224ee80, type: 2}
-  - {fileID: 11400000, guid: 33ab4cadbe0e0a84d91f8e5dc1d2d8cc, type: 2}
-  - {fileID: 11400000, guid: b00b575f5cf78e2439fa30a0e4023fe0, type: 2}
-  - {fileID: 11400000, guid: f1a15adffa8c15d49a7f2f44ba429470, type: 2}
-  - {fileID: 11400000, guid: 12ebd6def93ec864ab86329260edd3da, type: 2}
-  questionText: {fileID: 440753791}
-  buttonText:
-  - {fileID: 1473605638}
-  - {fileID: 547918740}
-  - {fileID: 344087091}
-  - {fileID: 0}
-  resultText: {fileID: 1420998415}
-  quizObject: {fileID: 361165277}
-  rectQuiz: {fileID: 1326669404}
-  pauseTime: 3
---- !u!4 &1267518208
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267518206}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326669404
 GameObject:
@@ -4216,7 +4152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -4867,18 +4803,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 273654396}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1525226703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,18 +5146,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1264811427}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 273654396}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6140,7 +6052,6 @@ Transform:
   m_Children:
   - {fileID: 998583396}
   - {fileID: 1264811428}
-  - {fileID: 273654397}
   - {fileID: 436332096}
   m_Father: {fileID: 7174083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6251,7 +6162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: SetQuestionIndex
         m_Mode: 3
@@ -6514,7 +6425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1267518207}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Quiz, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -6651,96 +6562,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079920922}
   m_CullTransparentMesh: 1
---- !u!1 &2139875972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2139875973}
-  - component: {fileID: 2139875974}
-  m_Layer: 0
-  m_Name: ArrowSharperCropped
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2139875973
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139875972}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -466.71783, y: -424.81, z: 8.301473}
-  m_LocalScale: {x: 0.42309004, y: 0.42309004, z: 0.42309004}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 273654397}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2139875974
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139875972}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f0695ba0f65c59844a733e9753b37034, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.85, y: 2.87}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1439440331}
-  - {fileID: 1267518208}
+  - {fileID: 44771986}
   - {fileID: 7174083}
   - {fileID: 1858624462}
   - {fileID: 1996763779}
