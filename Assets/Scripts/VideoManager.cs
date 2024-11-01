@@ -91,5 +91,6 @@ public class  VideoManager: Singleton<VideoManager>
         Player.clip = null;
         topicsGO.SetActive(true);
         videoScroll.value = 0;
+        GetComponent<Slider>().enabled = false;
     }
 }
