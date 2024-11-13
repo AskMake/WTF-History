@@ -10,8 +10,11 @@ public class  VideoManager: Singleton<VideoManager>
     public GameObject topicsGO;
     [SerializeField]
     private Slider videoScroll;
-    //[SerializeField]
-    //private GameObject pauseScreen;
+    
+    public GameObject pauseScreen;
+    public GameObject slider;
+    public GameObject exitMenu;
+    public GameObject exit;
 
     private void OnEnable()
     {
@@ -45,10 +48,9 @@ public class  VideoManager: Singleton<VideoManager>
     public double VidDuration => Player.time;
     public void PauseVid()
     {
-        if(Player.clip != null)
+        if (Player.clip != null)
         {
             Player.Pause();
-            //pauseScreen.SetActive(true);
         }
     }
     private void Update()
@@ -64,19 +66,25 @@ public class  VideoManager: Singleton<VideoManager>
         if(!Player.isPlaying && Player.clip != null && (ulong)Player.frame == Player.frameCount-1)
         {
             Player.Stop();
+            Player.clip= null;
             topicsGO.SetActive(true);
             videoScroll.value = 0;
+            slider.SetActive(false);
+            exitMenu.SetActive(false);
+            exit.SetActive(true);
         }
     }
     public void PauseUnpause()
     {
-        if (Player.clip != null && !Player.isPaused)
+        if (Player.clip != null && !Player.isPaused && Player.frame > 0)
         {
+            pauseScreen.SetActive(true);
             Player.Pause();
             videoScroll.interactable = true;
         }
         else if (Player.clip != null && Player.isPaused && !Quiz.Instance.displayQ)
         {
+            pauseScreen.SetActive(false);
             videoScroll.interactable = false;
             Player.Play();
         }
@@ -91,6 +99,8 @@ public class  VideoManager: Singleton<VideoManager>
         Player.clip = null;
         topicsGO.SetActive(true);
         videoScroll.value = 0;
-        GetComponent<Slider>().enabled = false;
+        slider.SetActive(false);
+        exitMenu.SetActive(false);
+        exit.SetActive(true);
     }
 }
