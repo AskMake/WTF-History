@@ -20,4 +20,4 @@ MonoBehaviour:
     isCorrect: 0
   - answerText: Sweat
     isCorrect: 0
-  waitTime: 169
+  waitTime: 1025

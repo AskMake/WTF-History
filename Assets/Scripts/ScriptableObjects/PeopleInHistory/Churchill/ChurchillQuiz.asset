@@ -21,4 +21,4 @@ MonoBehaviour:
     isCorrect: 1
   - answerText: "They don\u2019t need resources; they need birth control."
     isCorrect: 0
-  waitTime: 0
+  waitTime: 107
