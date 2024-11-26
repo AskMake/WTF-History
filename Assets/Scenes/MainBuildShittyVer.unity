@@ -1516,7 +1516,7 @@ MonoBehaviour:
         m_MethodName: PlayVid
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 32900000, guid: 64674b0820d2bf848a0739898e477e4c, type: 3}
+          m_ObjectArgument: {fileID: 32900000, guid: 2fc197d219ffe874e847d99b5b7ffb8d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
